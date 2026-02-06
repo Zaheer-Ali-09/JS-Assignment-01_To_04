@@ -14,21 +14,44 @@ console.log("Hello Second Assignment");
 
 // console.log("Final map result:", mapResult);
 // ________________________________ForEach_____________________________
-let numbers = [2, 4, 6];
+// let numbers = [2, 4, 6];
 
-console.log("Original Array:", numbers);
+// console.log("Original Array:", numbers);
 
-let forEachResult = [];
-numbers.forEach((num, index) => {
+// let forEachResult = [];
+// numbers.forEach((num, index) => {
 
-    console.log("forEach running on index:", index);
-    console.log("current value:", num);
+//     console.log("forEach running on index:", index);
+//     console.log("current value:", num);
 
-    let doubled = num * 2;
-    console.log("after double:", doubled);
-    forEachResult.push(doubled); // manually push
-});
+//     let doubled = num * 2;
+//     console.log("after double:", doubled);
+//     forEachResult.push(doubled); // manually push
+// });
 
-console.log("Final forEach result:", forEachResult);
+// console.log("Final forEach result:", forEachResult);
 
 // ________________________________ForEach_____________________________
+
+console.log("----- CONDITION 1: > 15 -----");
+
+let filtered1 = numbers.filter((num, index) => {
+
+  console.log("filter checking:", num);
+
+  return num > 15;
+});
+
+console.log("After filter:", filtered1);
+
+
+let result1 = filtered1.reduce((total, num) => {
+
+  console.log("reduce total before:", total);
+  console.log("adding:", num);
+
+  return total + num;
+
+}, 0);
+
+console.log("Final Result Condition 1:", result1);
